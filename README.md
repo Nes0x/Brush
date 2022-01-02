@@ -11,3 +11,7 @@
 `Komendy:`
 
 `/brushes give <nick> <poziom>`
+
+`Wymagane pluginy:`
+
+[WorldGuard](https://dev.bukkit.org/projects/worldguard/files)
