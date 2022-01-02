@@ -1,0 +1,10 @@
+name: Brush
+version: '${project.version}'
+main: me.nesox.brush.Brush
+api-version: 1.16
+authors: [ Nes0x ]
+depend: [WorldGuard]
+
+commands:
+  brushes:
+    permission: brushes.give

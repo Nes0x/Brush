@@ -1,0 +1,21 @@
+messages:
+  unknown-player: '&cGracz %player% nie jest online!'
+  no-permission: '&cNie masz permisji!'
+  no-arguments: '&cPoprawne użycie: /brush give <nick> <poziom>'
+  brush-give-success: '&aPomyślnie dałeś graczowi %player% brusha %level%'
+  brush-give-success-to-target: '&aDostałeś brusha %level%'
+  unknown-brush-level: '&cNie ma brusha o poziomie %level%'
+  console-execute-command: '&cNie możesz użyć tej komendy w konsoli!'
+  brush-use-on-region: '&cNie możesz tutaj używać brusha!'
+  brush-drop: '&cNie możesz wyrzucać brusha. Jeśli chcesz go komuś przekazać włóż go do skrzynki!'
+
+brush:
+  item: BLAZE_ROD
+  name: '&6Brush level: %level%'
+  max-level: 10
+
+settings:
+  brush-drop: false
+  player-death-save-brush: true
+  disabled-regions:
+    - 'spawn'
