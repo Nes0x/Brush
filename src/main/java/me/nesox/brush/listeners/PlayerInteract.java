@@ -50,11 +50,18 @@ public class PlayerInteract implements Listener {
         if (clickedBlock.getType() != Material.AIR) {
             if (itemInMainHand.getLore().get(0).replace("§6", "").equals("1")) {
                 if (clickedBlock.getType() == Material.BEDROCK) return;
+
                 if (isOnRegion(clickedBlock)) {
                     player.sendMessage(ChatUtil.fixColors(config.getString("messages.brush-use-on-region")));
                     return;
                 }
-                clickedBlock.setType(Material.AIR);
+
+                if (config.getBoolean("settings.drop-items")) {
+                    clickedBlock.breakNaturally();
+                } else {
+                    clickedBlock.setType(Material.AIR);
+                }
+
                 Brush.getInstance().getServer().getPluginManager().callEvent(new BlockBreakEvent(clickedBlock, player));
             } else {
                 int level = Integer.parseInt(itemInMainHand.getLore().get(0).replace("§6", "")) - 1;
@@ -69,7 +76,13 @@ public class PlayerInteract implements Listener {
                                     player.sendMessage(ChatUtil.fixColors(config.getString("messages.brush-use-on-region")));
                                     return;
                                 } else {
-                                    blockToDestroy.setType(Material.AIR);
+
+                                    if (config.getBoolean("settings.drop-items")) {
+                                        blockToDestroy.breakNaturally();
+                                    } else {
+                                        blockToDestroy.setType(Material.AIR);
+                                    }
+
                                     Brush.getInstance().getServer().getPluginManager().callEvent(new BlockBreakEvent(blockToDestroy, player));
                                 }
                             }

@@ -3,10 +3,7 @@ package me.nesox.brush;
 
 import me.nesox.brush.commands.BrushesTabComplete;
 import me.nesox.brush.commands.Brushes;
-import me.nesox.brush.listeners.PlayerDeath;
-import me.nesox.brush.listeners.PlayerDropItem;
-import me.nesox.brush.listeners.PlayerInteract;
-import me.nesox.brush.listeners.PlayerRespawn;
+import me.nesox.brush.listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Brush extends JavaPlugin {
@@ -24,7 +21,6 @@ public final class Brush extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerDropItem(), this);
         getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
         getServer().getPluginManager().registerEvents(new PlayerRespawn(), this);
-
     }
 
     @Override

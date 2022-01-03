@@ -17,5 +17,6 @@ brush:
 settings:
   brush-drop: false
   player-death-save-brush: true
+  drop-items: false
   disabled-regions:
     - 'spawn'
