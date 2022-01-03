@@ -8,3 +8,9 @@ depend: [WorldGuard]
 commands:
   brushes:
     permission: brush.give
+
+
+permissions:
+  brush.give:
+    description: Permisja do komendy /brushes
+    default: op
