@@ -7,4 +7,4 @@ depend: [WorldGuard]
 
 commands:
   brushes:
-    permission: brushes.give
+    permission: brush.give
