@@ -19,7 +19,7 @@
 
 `Pomoc/kontakt:`
 
-https://discord.gg/WVAHydXAkS`
+https://discord.gg/WVAHydXAkS
 
 Statystyki pluginu: 
 
