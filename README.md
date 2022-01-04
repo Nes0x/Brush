@@ -17,6 +17,8 @@
 [WorldGuard](https://dev.bukkit.org/projects/worldguard/files)
 
 
+`Pomoc/kontakt: https://discord.gg/WVAHydXAkS`
+
 Statystyki pluginu: 
 
 [bstats](https://bstats.org/plugin/bukkit/Brush/13843)
