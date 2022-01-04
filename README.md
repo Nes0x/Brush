@@ -15,3 +15,8 @@
 `Wymagane pluginy:`
 
 [WorldGuard](https://dev.bukkit.org/projects/worldguard/files)
+
+
+Statystyki pluginu: 
+
+[bstats](https://bstats.org/plugin/bukkit/Brush/13843)
