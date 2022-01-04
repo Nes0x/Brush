@@ -13,6 +13,12 @@ brush:
   item: BLAZE_ROD
   name: '&6Brush level: %level%'
   max-level: 10
+  enchant: true
+  effects-after-use-brush: true
+  effects:
+    - SPEED:2:30
+  enchantments:
+    - UNBREAKING:3
 
 settings:
   brush-drop: false

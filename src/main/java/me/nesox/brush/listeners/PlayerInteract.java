@@ -17,6 +17,8 @@ import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 
 
 public class PlayerInteract implements Listener {
@@ -48,6 +50,17 @@ public class PlayerInteract implements Listener {
         event.setCancelled(true);
 
         if (clickedBlock.getType() != Material.AIR) {
+            if (config.getBoolean("brush.effects-after-use-brush")) {
+                if (!config.getStringList("brush.effects").isEmpty()) {
+                    for (String effect : config.getStringList("brush.effects")) {
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.getByName(effect.split(":")[0]), 20*(Integer.parseInt(effect.split(":")[2])), Integer.parseInt(effect.split(":")[1]) - 1));
+
+                    }
+                }
+
+            }
+
+
             if (itemInMainHand.getLore().get(0).replace("§6", "").equals("1")) {
                 if (clickedBlock.getType() == Material.BEDROCK) return;
 

@@ -1,9 +1,12 @@
 package me.nesox.brush;
 
 
+import me.nesox.brush.utils.UpdateChecker;
+import org.bstats.bukkit.Metrics;
 import me.nesox.brush.commands.BrushesTabComplete;
 import me.nesox.brush.commands.Brushes;
 import me.nesox.brush.listeners.*;
+import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Brush extends JavaPlugin {
@@ -11,6 +14,15 @@ public final class Brush extends JavaPlugin {
 
     @Override
     public void onEnable() {
+
+        new Metrics(this, 13843);
+
+        new UpdateChecker(this, 98895).getVersion(version -> {
+            if (!this.getDescription().getVersion().equals(version)) {
+                getLogger().info(ChatColor.RED + "New update available! https://www.spigotmc.org/resources/brush.98895/");
+            }
+        });
+
         instance = this;
         getConfig().options().copyDefaults(true);
         saveConfig();

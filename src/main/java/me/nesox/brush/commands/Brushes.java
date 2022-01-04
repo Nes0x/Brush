@@ -5,10 +5,13 @@ import me.nesox.brush.utils.ChatUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.enchantments.Enchantment;
+import org.bukkit.enchantments.EnchantmentWrapper;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -24,6 +27,19 @@ public class Brushes implements CommandExecutor {
         brushMeta.setDisplayName(ChatUtil.fixColors(config.getString("brush.name").replace("%level%", level)));
         ArrayList<String> lore = new ArrayList<>();
         lore.add(ChatColor.GOLD + level);
+
+
+        if (config.getBoolean("brush.enchant")) {
+            if (!config.getStringList("brush.enchantments").isEmpty()) {
+                for (String enchant : config.getStringList("brush.enchantments")) {
+                    String name = enchant.split(":")[0];
+                    int levelOfEnchant = Integer.parseInt(enchant.split(":")[1]);
+                    brushMeta.addEnchant(EnchantmentWrapper.getByKey(NamespacedKey.minecraft(name.toLowerCase())), levelOfEnchant, true);
+
+                }
+            }
+        }
+
         brushMeta.setLore(lore);
         brush.setItemMeta(brushMeta);
 
