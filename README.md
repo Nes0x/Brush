@@ -17,7 +17,9 @@
 [WorldGuard](https://dev.bukkit.org/projects/worldguard/files)
 
 
-`Pomoc/kontakt: https://discord.gg/WVAHydXAkS`
+`Pomoc/kontakt: 
+
+https://discord.gg/WVAHydXAkS`
 
 Statystyki pluginu: 
 
