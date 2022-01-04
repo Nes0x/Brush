@@ -17,7 +17,7 @@
 [WorldGuard](https://dev.bukkit.org/projects/worldguard/files)
 
 
-`Pomoc/kontakt: 
+`Pomoc/kontakt:`
 
 https://discord.gg/WVAHydXAkS`
 
