@@ -2,7 +2,7 @@
 
 ## Informacje
 
-`Przetestowane wersje: 1.16.5`
+`Przetestowane wersje: 1.16.x, 1.17.x, 1.18.x`
 
 `Permisje:`
 
